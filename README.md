@@ -18,7 +18,7 @@ Dim Uid As String
 Dim Pwd As String
 Dim numrow As Long
 Dim i As Long
-' Written by Nicholas Papiri 1/1/2012 - FXXXX XXXD INC.
+' Written by Nicholas Papiri 1/1/2012 - XXXXX XXXD .
 
 'Select Dates
 COD = Format(Worksheets("Summary").Range("B249").Value, "m/d/yyyy hh:mm:ss")
@@ -26,9 +26,10 @@ Startdates = Format(Worksheets("Summary").Range("C3").Value, "m/d/yyyy hh:mm:ss"
 enddates = Format(Worksheets("Summary").Range("C4").Value, "m/d/yyyy hh:mm:ss")
 Server_Name = "10.7.32.22" ' Enter your server name here
 Uid = "Data_Pull" ' enter your user ID here
-Password = "Pull_Data" ' Enter your password here
-Database_Name = "MIL" ' Enter your database name here
+Password = XXXXXXXXX ' Enter your password here
+Database_Name = XXXXX ' Enter your database name here
 
+'SQL String - Meters defined in SQL Query
 SQLStr = "Select DTTM, RTAC_Device_Cntrs_F1Meter_345kV_KWHDel_Frozen_VALUE as 'F1', RTAC_Device_Cntrs_F2Meter_345kV_KWHDel_Frozen_VALUE as 'F2',RTAC_Device_Cntrs_F3Meter_345kV_KWHDel_Frozen_VALUE as 'F3',RTAC_Device_Cntrs_F4Meter_345kV_KWHDel_Frozen_VALUE as 'F4',RTAC_Device_Cntrs_F5Meter_345kV_KWHDel_Frozen_VALUE as 'F5',RTAC_Device_Cntrs_F6Meter_345kV_KWHDel_Frozen_VALUE as 'F6',RTAC_Device_Cntrs_F7Meter_345kV_KWHDel_Frozen_VALUE as 'F7', RTAC_Device_Cntrs_Bus1Meter_345kV_KWHDel_Frozen_VALUE as 'Buss I', RTAC_Device_Cntrs_Bus2Meter_345kV_KWHDel_Frozen_VALUE as 'Buss II',RTAC_Device_Cntrs_SSMeter_345kV_KWHDel_Frozen_Value as 'SSM', RTAC_Device_Cntrs_IPPMeter_345kV_KWHRec_Frozen_VALUE as 'IPP', RTAC_Device_Cntrs_IPPMeter_345kV_KWHRec_Frozen_VALUE as 'KVARh' from dbo.RTAC_cntrs where DTTM between '" & Startdates & "' and '" & enddates & "' order by DTTM asc"
 
 
@@ -131,7 +132,7 @@ Sub Propogate()
 
  If DBOPEN = 0 Then
 
- 'This Code Drags and autofills all major calculations,which is dependent on the number of rows calculated in the query,
+ 'This Code Drags and autofills all major calculations,which is dependent on the number of rows calculated in the         query,
  'in the spread sheet and returns the user back to the interface
 
     Dim mycount As Long
