@@ -24,7 +24,7 @@ Dim i As Long
 COD = Format(Worksheets("Summary").Range("B249").Value, "m/d/yyyy hh:mm:ss")
 Startdates = Format(Worksheets("Summary").Range("C3").Value, "m/d/yyyy hh:mm:ss")
 enddates = Format(Worksheets("Summary").Range("C4").Value, "m/d/yyyy hh:mm:ss")
-Server_Name = "10.7.32.22" ' Enter your server name here
+Server_Name = "XX.XXX.XX.XX" ' Enter your server name here
 Uid = "Data_Pull" ' enter your user ID here
 Password = XXXXXXXXX ' Enter your password here
 Database_Name = XXXXX ' Enter your database name here
